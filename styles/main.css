@@ -6,14 +6,8 @@
   font: inherit;
 }
 
-:root {
-  --grey: #4a4a4a;
-  --blue-green: #3cdbc0;
-  --white: #ffffff;
-  --text: "Rubik", sans-serif;
-}
 .body {
-  width: 100vw;
+  width: max-content;
   display: block;
 }
 .header {
@@ -25,37 +19,41 @@
 
 .logo-box {
   display: inline;
+  width: 155px;
 }
 
 .header-logo {
+  display: block;
 }
 
 .menu-box {
+  width: 100vw;
 }
 
 .menu {
   display: flex;
+  justify-content: center;
+  width: 100vw;
 }
 
 .menu-elements {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-content: center;
+  justify-content: space-evenly;
   padding-top: 10px;
   padding-bottom: 13px;
 }
 
 .blog {
-  display: inline-block;
+  display: block;
   font-family: "Rubik", sans-serif;
   box-sizing: border-box;
   border: 10px;
   padding-bottom: 3px;
 }
 .contact {
-  display: inline-block;
+  display: block;
   font-family: "Rubik", sans-serif;
   box-sizing: border-box;
   border: 10px;
@@ -69,10 +67,22 @@
   font-family: "Rubik", sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   background-color: #3cdbc0;
 }
 
 .text-line {
   color: #ffffff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+@media all and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .text-line {
+    font-size: 40px;
+  }
 }
