@@ -1,7 +1,7 @@
 */ {
   margin: 0;
   padding: 0;
-  border: 0;
+  box-sizing: border-box;
   font-size: 100%;
   font: inherit;
 }
@@ -9,12 +9,14 @@
 .body {
   width: max-content;
   display: block;
+  font-family: "Rubik", sans-serif;
 }
 .header {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Rubik", sans-serif;
 }
 
 .logo-box {
@@ -47,8 +49,7 @@
 
 .blog {
   display: inline;
-  font-family: "Rubik", sans-serif;
-  text-transform: capitalize;
+  text-transform: uppercase;
   box-sizing: border-box;
   border: 10px;
   padding: 10px;
@@ -56,8 +57,7 @@
 }
 .contact {
   display: inline;
-  font-family: "Rubik", sans-serif;
-  text-transform: capitalize;
+  text-transform: uppercase;
   box-sizing: border-box;
   border: 10px;
   padding: 10px;
@@ -66,29 +66,29 @@
 
 .main-content {
   height: 100vw;
+  font-family: "Rubik", sans-serif;
 }
 .content {
-  font-family: "Rubik", sans-serif;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #3cdbc0;
+  font-size: 30px;
 }
 
 .text-line {
-  color: #ffffff;
-  font-size: 30px;
   font-weight: 600;
   display: inline;
+  text-transform: capitalize;
 }
 
 @media all and (min-width: 768px) {
   .header {
-    display: flex;
     justify-content: space-between;
   }
-  .text-line {
+  .content {
     font-size: 40px;
   }
 }
