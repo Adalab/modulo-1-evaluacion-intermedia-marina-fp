@@ -1,4 +1,4 @@
-*/ {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,16 +7,22 @@
 }
 
 .body {
+  margin: 0px;
   width: max-content;
+  height: 100vh;
   display: block;
   font-family: "Rubik", sans-serif;
 }
 .header {
   width: 100vw;
+  padding: 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Rubik", sans-serif;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 5;
 }
 
 .logo-box {
@@ -24,12 +30,9 @@
   width: 155px;
 }
 
-.header-logo {
+.logo-image {
   display: block;
-}
-
-.menu-box {
-  width: 100vw;
+  padding: 10px;
 }
 
 .menu {
@@ -40,11 +43,7 @@
 
 .menu-elements {
   list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 13px;
+  padding: 10px 0px;
 }
 
 .blog {
@@ -55,6 +54,12 @@
   padding: 10px;
   color: #4a4a4a;
 }
+.blog-link {
+  padding: 10px;
+}
+.blog-link:visited {
+  color: #4a4a4a;
+}
 .contact {
   display: inline;
   text-transform: uppercase;
@@ -63,29 +68,45 @@
   padding: 10px;
   color: #4a4a4a;
 }
-
+.contact-link {
+  padding: 10px;
+}
+.contact-link:visited {
+  color: #4a4a4a;
+}
 .main-content {
-  height: 100vw;
-  font-family: "Rubik", sans-serif;
+  border: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3cdbc0;
 }
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: #3cdbc0;
   font-size: 30px;
 }
 
 .text-line {
+  color: #ffffff;
   font-weight: 600;
   display: inline;
   text-transform: capitalize;
+  margin: 5px;
 }
 
 @media all and (min-width: 768px) {
   .header {
+    flex-direction: row;
     justify-content: space-between;
+    padding: 20px 30px 20px 30px;
+  }
+  .menu {
+    justify-content: flex-end;
   }
   .content {
     font-size: 40px;
